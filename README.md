@@ -1,6 +1,6 @@
 # Leetcode-Programming-Exercises
 
-## 6. ZigZag Conversion
+## 6. ZigZag Conversion (Rust)
 
 ### 解題思路
 這題要求將字串按照Z字形模式重新排列，然後按行讀取。我使用了一個方向變量來控制字符添加的方向，當到達最上方或最下方時改變方向。
