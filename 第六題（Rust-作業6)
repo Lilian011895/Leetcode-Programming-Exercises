@@ -1,0 +1,24 @@
+impl Solution {
+    pub fn convert(s: String, num_rows: i32) -> String {
+        if num_rows == 1 || s.len() <= 1 {
+            return s;
+        }
+        
+        let mut rows: Vec<String> = vec![String::new(); num_rows as usize];
+        
+        let mut current_row = 0;
+        let mut direction = 1; 
+        
+        for c in s.chars() {
+            rows[current_row as usize].push(c);
+            
+            if current_row + direction < 0 || current_row + direction >= num_rows {
+                direction = -direction; 
+            }
+            
+            current_row += direction;
+        }
+        
+        rows.concat()
+    }
+}
